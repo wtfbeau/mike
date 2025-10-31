@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      The Decentralized A-Team Method™ - For CTOs Who've Become The Bottleneck
+    </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.65;
+        color: #2c3e50;
+        background: #ffffff;
+      }
+
+      .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .pre-head {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+        color: #95a5a6;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 30px 0 15px 0;
+      }
+
+      h1 {
+        font-size: 46px;
+        line-height: 1.15;
+        margin: 15px 0 25px 0;
+        color: #1a1a1a;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .subhead {
+        font-size: 23px;
+        line-height: 1.45;
+        margin: 0 0 35px 0;
+        color: #34495e;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 32px;
+        line-height: 1.3;
+        margin: 55px 0 20px 0;
+        color: #1a1a1a;
+        font-weight: 700;
+      }
+
+      h3 {
+        font-size: 22px;
+        line-height: 1.35;
+        margin: 35px 0 15px 0;
+        color: #2c3e50;
+        font-weight: 700;
+      }
+
+      p {
+        margin: 18px 0;
+        font-size: 18px;
+        line-height: 1.7;
+      }
+
+      .problem-box {
+        background: #ffe6e6;
+        border-left: 5px solid #e74c3c;
+        padding: 30px;
+        margin: 35px 0;
+        border-radius: 4px;
+      }
+
+      .solution-box {
+        background: #e8f8f5;
+        border-left: 5px solid #27ae60;
+        padding: 30px;
+        margin: 35px 0;
+        border-radius: 4px;
+      }
+
+      .insight-box {
+        background: #fff9e6;
+        border-left: 5px solid #f39c12;
+        padding: 30px;
+        margin: 35px 0;
+        border-radius: 4px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: #e74c3c;
+        color: white;
+        padding: 20px 42px;
+        font-size: 19px;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 6px;
+        margin: 25px 0;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+      }
+
+      .cta-button:hover {
+        background: #c0392b;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+      }
+
+      .cta-wrap {
+        text-align: center;
+        margin: 45px 0;
+      }
+
+      .bullet-list {
+        margin: 20px 0;
+      }
+
+      .bullet-list li {
+        margin: 14px 0 14px 25px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .metrics-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+      }
+
+      .metric {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 25px 15px;
+        border-radius: 8px;
+        text-align: center;
+        color: white;
+      }
+
+      .metric-num {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 8px;
+      }
+
+      .metric-txt {
+        font-size: 14px;
+        line-height: 1.4;
+        opacity: 0.95;
+      }
+
+      .quote-box {
+        background: #f8f9fa;
+        padding: 30px;
+        margin: 40px 0;
+        border-radius: 6px;
+        font-style: italic;
+        border-left: 5px solid #3498db;
+        font-size: 18px;
+      }
+
+      .quote-author {
+        margin-top: 15px;
+        font-style: normal;
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 16px;
+      }
+
+      .guarantee-block {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 40px;
+        margin: 50px 0;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .guarantee-block h3 {
+        color: white;
+        margin-top: 0;
+        font-size: 26px;
+      }
+
+      .guarantee-block p {
+        font-size: 18px;
+        line-height: 1.65;
+      }
+
+      strong {
+        font-weight: 700;
+      }
+
+      .emphasis {
+        background: linear-gradient(180deg, transparent 60%, #ffeb3b 60%);
+        font-weight: 600;
+        padding: 0 3px;
+      }
+
+      .divider {
+        width: 60px;
+        height: 4px;
+        background: #e74c3c;
+        margin: 50px auto;
+      }
+
+      .module {
+        background: #f8f9fa;
+        padding: 22px;
+        margin: 15px 0;
+        border-radius: 6px;
+        border-left: 4px solid #3498db;
+      }
+
+      .module-head {
+        font-size: 18px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+
+      .module-desc {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+      }
+
+      .module-num {
+        display: inline-block;
+        background: #3498db;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 10px;
+      }
+
+      .faq {
+        margin: 30px 0;
+        padding: 25px;
+        background: #f8f9fa;
+        border-radius: 6px;
+      }
+
+      .faq-q {
+        font-size: 19px;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 12px;
+      }
+
+      .faq-a {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      .urgency-note {
+        background: #fff3cd;
+        border: 2px solid #f39c12;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .result-item {
+        background: white;
+        border: 2px solid #ecf0f1;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 6px;
+        border-left: 4px solid #27ae60;
+      }
+
+      .result-item strong {
+        color: #27ae60;
+        font-size: 17px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 36px;
+        }
+
+        .subhead {
+          font-size: 20px;
+        }
+
+        h2 {
+          font-size: 27px;
+        }
+
+        .metric-num {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pre-head">For CTOs at $500K+ Revenue Companies</div>
+
+      <h1>
+        You're The Most Expensive Single Point of Failure In Your Company's
+        Architecture
+      </h1>
+
+      <p class="subhead">
+        Every decision routes through you. Every deployment waits on you. Every
+        fire escalates to you.
+        <strong
+          >You've accidentally designed your team to be helpless without
+          you.</strong
+        >
+      </p>
+
+      <div class="problem-box">
+        <p style="font-size: 19px; font-weight: 600; margin-bottom: 15px">
+          And here's what that architectural flaw is actually costing you:
+        </p>
+        <ul class="bullet-list">
+          <li>
+            <strong>70-100 hour weeks</strong> destroying your health while your
+            CEO wonders why you can't "just delegate"
+          </li>
+          <li>
+            <strong>Passed over for VP/C-suite</strong> because you're seen as
+            "too tactical" and "can't step back"
+          </li>
+          <li>
+            Your team operates at <strong>60% capacity</strong> — not because
+            they're bad, but because they're waiting on you
+          </li>
+          <li>
+            <strong>Good engineers are leaving</strong> because working under
+            you means being micromanaged (even though that's not your intent)
+          </li>
+          <li>
+            <strong>Technical debt compounds daily</strong> because you're too
+            busy firefighting to address it
+          </li>
+          <li>
+            <strong>Can't take vacation</strong> without everything grinding to
+            a halt — and your family notices
+          </li>
+          <li>
+            The board keeps asking
+            <strong>"Why does development take so long?"</strong> and you don't
+            have a good answer
+          </li>
+          <li>
+            <strong>Production incidents at 3am</strong> always escalate to you,
+            even when your team knows the fix
+          </li>
+        </ul>
+      </div>
+
+      <p>Here's the brutal truth nobody tells CTOs:</p>
+
+      <p>
+        <span class="emphasis"
+          >Every time you answer a Slack message, solve a problem, or approve a
+          decision... you're teaching your team to be dependent on you.</span
+        >
+      </p>
+
+      <p>
+        It's not malicious. You're just <em>really good</em> at solving
+        problems. You can debug faster, architect better, and make decisions
+        more confidently than most of your team.
+      </p>
+
+      <p><strong>So everyone brings their problems to you.</strong></p>
+
+      <p>
+        And because you're fast and competent, you solve them. But every time
+        you do, you reinforce the pattern: "I need the CTO to make this
+        decision."
+      </p>
+
+      <p>
+        You've created a system where
+        <strong>you are the throughput constraint.</strong>
+      </p>
+
+      <p>
+        The same technical brilliance that got you promoted is now the exact
+        thing keeping you trapped. You've optimized yourself into
+        irreplaceability — and irreplaceable people don't get promoted to VP.
+        They get burned out or replaced by someone who knows how to build
+        scalable teams.
+      </p>
+
+      <div class="urgency-note">
+        ⚠️ Only 5 enrollment spots open this month — if this resonates, enroll
+        now before they fill
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>You've Been Refactoring The Wrong Thing</h2>
+
+      <p>
+        You understand distributed systems. You know how to build for scale.
+        You'd never design software where every request has to go through a
+        single server.
+      </p>
+
+      <p><strong>So why did you design your team that way?</strong></p>
+
+      <p>
+        Imagine running your tech organization like properly architected
+        software:
+      </p>
+
+      <div class="solution-box">
+        <ul class="bullet-list">
+          <li>
+            <strong>Distributed decision-making</strong> — clear authority
+            boundaries so teams know what they own
+          </li>
+          <li>
+            <strong>Autonomous operation</strong> — teams identify problems,
+            evaluate solutions, ship code without routing through you
+          </li>
+          <li>
+            <strong>Built-in redundancy</strong> — the system runs smoothly
+            whether you're online or offline
+          </li>
+          <li>
+            <strong>Self-healing feedback loops</strong> — issues surface and
+            get resolved before they become 3am emergencies
+          </li>
+          <li>
+            <strong>Horizontal scalability</strong> — adding people increases
+            throughput instead of creating more dependencies
+          </li>
+        </ul>
+      </div>
+
+      <p><strong>What would that unlock?</strong></p>
+
+      <ul class="bullet-list">
+        <li>Work 40-45 hours per week instead of 80+</li>
+        <li>
+          Get promoted to VP because you've proven you can scale beyond yourself
+        </li>
+        <li>Take actual vacations (phone off) without everything imploding</li>
+        <li>Address technical debt strategically instead of reactively</li>
+        <li>Retain your best engineers because they have real ownership</li>
+        <li>Sleep through the night without Slack notifications</li>
+        <li>Show up for your family again</li>
+      </ul>
+
+      <p>
+        That's exactly what I help CTOs build with
+        <strong>The Decentralized A-Team Method™</strong>.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>I Built This System Because I Was Drowning</h2>
+
+      <p>
+        I'm Mike. I was a CTO for 20 years across multiple high-growth
+        companies.
+      </p>
+
+      <p>
+        On paper, I crushed it: Led hundreds of successful projects. Built
+        software that resulted in an <strong>$85 million acquisition</strong> —
+        the acquiring company bought us specifically for what I architected.
+      </p>
+
+      <p><strong>Behind the scenes? I was barely surviving.</strong></p>
+
+      <p>
+        100-hour weeks. Every week. For years. Missing my kids growing up. My
+        wife drafting divorce papers. Four hours of sleep. Living on caffeine
+        and stress.
+      </p>
+
+      <p>
+        My team wasn't hitting their potential. Projects constantly slipped. I
+        was the bottleneck on everything.
+      </p>
+
+      <p>
+        Every leadership book told me to "delegate more" and "trust my team."
+        Useless advice. I <em>was</em> delegating tasks. But I was still the
+        single point of failure for every decision.
+      </p>
+
+      <p><strong>Then I had my breakthrough.</strong></p>
+
+      <p>
+        Driving to another management meeting, half-listening to sports radio
+        complaining about the Dodgers' manager Dave Roberts, the host said
+        something that stopped me:
+      </p>
+
+      <p
+        style="
+          font-style: italic;
+          padding: 20px;
+          background: #f8f9fa;
+          border-left: 4px solid #3498db;
+          margin: 25px 0;
+          border-radius: 4px;
+        "
+      >
+        "Sure, players need to perform at 100%. But when a talented team
+        consistently underperforms, that's not a talent problem — it's a systems
+        problem. The manager is responsible for creating the conditions where
+        they CAN perform."
+      </p>
+
+      <p><strong>Holy shit.</strong></p>
+
+      <p>
+        I didn't have a team problem. I had an <em>architecture</em> problem.
+      </p>
+
+      <p>
+        My team wasn't underperforming because they were incompetent. They were
+        underperforming because I had architected a system where every decision
+        had to flow through me.
+      </p>
+
+      <p>
+        <span class="emphasis"
+          >I had designed myself as the critical path. The bottleneck was
+          ME.</span
+        >
+      </p>
+
+      <p>
+        That day, I started building what became The Decentralized A-Team
+        Method. I spent 90 days systematically refactoring my leadership the
+        same way I'd refactor code.
+      </p>
+
+      <h3>Here's What Happened:</h3>
+
+      <div class="metrics-row">
+        <div class="metric">
+          <div class="metric-num">55%</div>
+          <div class="metric-txt">Fewer hours worked<br />(100 → 45/week)</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-num">100%</div>
+          <div class="metric-txt">
+            On-time delivery<br />(zero missed deadlines)
+          </div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-num">400%</div>
+          <div class="metric-txt">NPS increase<br />(5 → 25 in 90 days)</div>
+        </div>
+
+        <div class="metric">
+          <div class="metric-num">0%</div>
+          <div class="metric-txt">Team attrition<br />(100% retention)</div>
+        </div>
+      </div>
+
+      <p>
+        <strong>But the numbers don't capture what actually changed:</strong>
+      </p>
+
+      <div class="result-item">
+        <strong>Week 3:</strong> My senior engineer deployed a major feature
+        without asking for my approval. It worked perfectly. I realized he'd
+        been capable of this the whole time — he just needed permission.
+      </div>
+
+      <div class="result-item">
+        <strong>Week 5:</strong> A production incident happened at 2am. My team
+        debugged it, deployed a fix, and documented the postmortem. I found out
+        about it the next morning when I read their summary. I didn't lose a
+        minute of sleep.
+      </div>
+
+      <div class="result-item">
+        <strong>Week 7:</strong> I attended my daughter's piano recital on a
+        Tuesday afternoon. My phone stayed in my pocket. Nothing broke.
+      </div>
+
+      <div class="result-item">
+        <strong>Week 9:</strong> My CEO pulled me aside: "I don't know what
+        you've changed, but the dev team is shipping faster than ever and you
+        seem... calmer. Whatever you're doing, keep doing it."
+      </div>
+
+      <div class="result-item">
+        <strong>Week 12:</strong> My wife and I went on our first vacation in 4
+        years. Phone completely off for 7 days. The team didn't just survive —
+        they thrived. Two team members later told me it was the first time they
+        felt truly trusted.
+      </div>
+
+      <div class="quote-box">
+        "His wealth of experience was evident from day one. I'm confident that
+        he will add tremendous value to any team."
+        <div class="quote-author">— Jon Blaylock, Founder & CEO, 3Lock Inc</div>
+      </div>
+
+      <p>
+        Since building this system, I've used it with dozens of CTOs across
+        companies from $500K to $50M+ in revenue.
+      </p>
+
+      <p>
+        <strong
+          >The results are remarkably consistent: 40-55% reduction in working
+          hours while team performance increases dramatically.</strong
+        >
+      </p>
+
+      <p>
+        Not because they're working harder. Because the <em>architecture</em> is
+        finally correct.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Introducing: The Decentralized A-Team Method™</h2>
+
+      <p class="subhead">
+        A complete 8-module course that gives you the exact system to transform
+        your team from dependent to autonomous in 90 days —
+        <strong>built specifically for CTOs who think in systems</strong>.
+      </p>
+
+      <p>
+        This isn't "leadership 101" from a business school professor who's never
+        deployed code.
+      </p>
+
+      <p>
+        This isn't "delegate more" platitudes that ignore the reality of
+        technical complexity.
+      </p>
+
+      <p>
+        <strong
+          >This is a systematic framework built by a CTO, for CTOs, using the
+          same thinking you apply to software architecture.</strong
+        >
+      </p>
+
+      <h3>The Core: The P.A.C.E. Framework</h3>
+
+      <p>
+        The transformation happens through four integrated components that work
+        together like microservices:
+      </p>
+
+      <div style="margin: 35px 0">
+        <div style="margin: 25px 0">
+          <p
+            style="
+              font-size: 20px;
+              color: #3498db;
+              font-weight: 700;
+              margin-bottom: 8px;
+            "
+          >
+            P — Purposeful Alignment
+          </p>
+          <p>
+            <strong>The Problem:</strong> Your team asks "Should we do X or Y?"
+            because they don't have a decision framework.
+          </p>
+          <p style="margin-top: 8px">
+            <strong>The Fix:</strong> Define your North Star Purpose and build
+            decision filters. Your team learns to evaluate options autonomously
+            instead of escalating every choice to you.
+          </p>
+        </div>
+
+        <div style="margin: 25px 0">
+          <p
+            style="
+              font-size: 20px;
+              color: #3498db;
+              font-weight: 700;
+              margin-bottom: 8px;
+            "
+          >
+            A — Agile Collaboration
+          </p>
+          <p>
+            <strong>The Problem:</strong> Information flows through you. When
+            you're unavailable, everything stops.
+          </p>
+          <p style="margin-top: 8px">
+            <strong>The Fix:</strong> Build communication cadences and feedback
+            loops that work without you. Create peer-to-peer channels that
+            surface problems early and enable self-correction.
+          </p>
+        </div>
+
+        <div style="margin: 25px 0">
+          <p
+            style="
+              font-size: 20px;
+              color: #3498db;
+              font-weight: 700;
+              margin-bottom: 8px;
+            "
+          >
+            C — Clear Accountability
+          </p>
+          <p>
+            <strong>The Problem:</strong> When something breaks, everyone points
+            fingers because ownership is ambiguous.
+          </p>
+          <p style="margin-top: 8px">
+            <strong>The Fix:</strong> Redefine roles by outcomes, not job
+            titles. Build visibility that tracks ownership, not activity. Make
+            the Accountability Loop crystal clear: expectations → visibility →
+            consequences.
+          </p>
+        </div>
+
+        <div style="margin: 25px 0">
+          <p
+            style="
+              font-size: 20px;
+              color: #3498db;
+              font-weight: 700;
+              margin-bottom: 8px;
+            "
+          >
+            E — Effective Communication
+          </p>
+          <p>
+            <strong>The Problem:</strong> Your CEO doesn't understand your
+            roadmap. Your team doesn't understand business priorities. You're
+            constantly translating.
+          </p>
+          <p style="margin-top: 8px">
+            <strong>The Fix:</strong> Implement top-down clarity (business →
+            tech) and bottom-up reporting (tech → business value). Use the DCAT
+            Meeting Stack to cut meeting time 60% while improving alignment.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        <strong>When these four components integrate:</strong> Your team stops
+        waiting for you to tell them what to do... and starts operating like
+        they own the outcomes.
+      </p>
+
+      <h3>What's Inside The Course:</h3>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 1</span> The Firefighter Trap
+        </div>
+        <div class="module-desc">
+          Diagnose where control and dependency are killing your scalability.
+          Identify your "Firefighter Type" and map the exact points where you're
+          the bottleneck.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 2</span> Purposeful Alignment
+        </div>
+        <div class="module-desc">
+          Build your North Star Purpose and decision filters. Replace "What
+          should I do?" escalations with autonomous decision-making.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 3</span> Agile Collaboration
+        </div>
+        <div class="module-desc">
+          Design communication rhythms and feedback loops that make your team
+          self-adjusting. Problems surface and get solved without you.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 4</span> Clear Accountability
+        </div>
+        <div class="module-desc">
+          Redefine every role by outcomes. Build ownership dashboards. Eliminate
+          the blame game forever with the Accountability Loop.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 5</span> Effective Communication
+        </div>
+        <div class="module-desc">
+          Translate tech complexity into business value. Implement the DCAT
+          Meeting Stack. Master the "Triage Method" for handling escalations.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 6</span> Decentralized Operating
+          System
+        </div>
+        <div class="module-desc">
+          Integrate all P.A.C.E. components into one repeatable system. Build
+          your Leadership Dashboard — the control panel that runs your
+          department.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 7</span> Culture, Hiring & Retention
+        </div>
+        <div class="module-desc">
+          Hire for autonomous thinking from day one. Onboard for ownership.
+          Build trust as your team's autonomy accelerant.
+        </div>
+      </div>
+
+      <div class="module">
+        <div class="module-head">
+          <span class="module-num">MODULE 8</span> The Freedom Framework
+        </div>
+        <div class="module-desc">
+          Protect your time and energy. Design "off-ramp" systems that let you
+          unplug without guilt. Redefine success from hours worked to outcomes
+          delivered.
+        </div>
+      </div>
+
+      <div
+        class="module"
+        style="border-left-color: #f39c12; background: #fff9e6"
+      >
+        <div class="module-head">
+          <span class="module-num" style="background: #f39c12">BONUS</span>
+          30-Day Implementation Sprint
+        </div>
+        <div class="module-desc">
+          Turn everything into measurable results in 30 days. Pick one
+          team/project, apply the tools in sequence, track your results.
+        </div>
+      </div>
+
+      <div class="insight-box">
+        <p style="margin: 0"><strong>You also get:</strong></p>
+        <ul class="bullet-list">
+          <li>
+            <strong>Complete implementation toolkit:</strong> Every template,
+            framework, canvas, and playbook (Accountability Matrix, Decision
+            Trees, Communication Protocols, DCAT Ops Board, etc.)
+          </li>
+          <li>
+            <strong>12 months of full access</strong> to all course materials
+            plus any future updates
+          </li>
+          <li>
+            <strong>Private community access</strong> with other CTOs
+            implementing the method
+          </li>
+          <li>
+            <strong>Self-paced learning:</strong> Complete in 12 weeks or move
+            faster on your schedule
+          </li>
+        </ul>
+      </div>
+
+      <p
+        style="
+          font-size: 15px;
+          margin: 25px 0;
+          padding: 18px;
+          background: #f8f9fa;
+          border-radius: 6px;
+        "
+      >
+        <strong>Note:</strong> The course is completely self-contained with
+        everything you need to implement the system. If you want additional live
+        support after completing it, Group Coaching and VIP 1-on-1 programs are
+        available as separate upgrades.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Your Investment</h2>
+
+      <p><strong>The Decentralized A-Team Method™ Course: $2,997</strong></p>
+
+      <p style="font-size: 17px; margin: 25px 0">
+        <strong>Let's do the math:</strong> If this course saves you just 30
+        hours per week (conservative based on average client results), that's
+        120+ hours per month. At your effective hourly rate, this investment
+        pays for itself in the first week.
+      </p>
+
+      <p>
+        More importantly:
+        <strong>What's the cost of staying where you are?</strong>
+      </p>
+
+      <ul class="bullet-list">
+        <li>Another year of 80-hour weeks while your health deteriorates</li>
+        <li>Missing more of your kids' childhoods (they're only young once)</li>
+        <li>
+          Watching your best engineers leave because the chaos is unsustainable
+        </li>
+        <li>Getting passed over for VP again because you're "too tactical"</li>
+        <li>
+          Burning out and having someone else come in to fix what you couldn't
+        </li>
+      </ul>
+
+      <div class="guarantee-block">
+        <h3>🏖️ The "Dream Vacation" Guarantee</h3>
+        <p>
+          If your company does <strong>$500K+ in annual revenue</strong> and you
+          implement the system, I guarantee you'll
+          <strong>cut your working hours by up to 50% within 90 days.</strong>
+        </p>
+        <p style="margin-top: 20px">
+          If by day 90 you can't take that vacation you've been postponing,
+          email me proof you completed the modules and implemented the
+          frameworks — I'll refund 100%, no questions asked.
+        </p>
+        <p style="margin-top: 20px">
+          <strong
+            >You either get results or get your money back. The only risk is
+            staying stuck.</strong
+          >
+        </p>
+      </div>
+
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Enroll In The Course Now →</a
+        >
+        <p style="margin-top: 15px; font-size: 15px; color: #7f8c8d">
+          Instant access. Start today.
+        </p>
+      </div>
+
+      <p
+        style="
+          font-size: 15px;
+          margin: 30px 0;
+          padding: 18px;
+          background: #f8f9fa;
+          border-radius: 6px;
+          text-align: center;
+        "
+      >
+        <strong>Questions before enrolling?</strong> Need custom payment plans?
+        Book a free 30-minute call and I'll answer everything.
+        <a
+          href="https://links.yvcto.social/dcateam"
+          style="color: #3498db; text-decoration: underline"
+          >Schedule here</a
+        >.
+      </p>
+
+      <div class="divider"></div>
+
+      <h2>Common Questions</h2>
+
+      <div class="faq">
+        <div class="faq-q">
+          Q: How can you guarantee I'll cut my hours in half?
+        </div>
+        <div class="faq-a">
+          <p>
+            Because you're currently the bottleneck. When we distribute
+            decision-making authority and remove you as the single point of
+            failure, the math works.
+          </p>
+          <p>
+            I've done this with dozens of CTOs. Average result: 40-55% hour
+            reduction. If you implement the system and you're coachable, your
+            hours will drop. If they don't, you get refunded.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">Q: What if my team isn't capable of autonomy?</div>
+        <div class="faq-a">
+          <p>
+            Here's what I've learned in 20 years:
+            <strong
+              >Most "incapable teams" are capable teams trapped in dependency
+              architecture.</strong
+            >
+          </p>
+          <p>
+            When your team constantly escalates to you, that's not incompetence
+            — you've systematically trained them that you are the source of all
+            decisions. It's actually rational behavior in the system you've
+            built.
+          </p>
+          <p>
+            We fix the system (decision frameworks, accountability structures,
+            communication rhythms), and suddenly your "C-players" start making
+            great decisions. It's not magic — it's architecture.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">
+          Q: I already delegate tasks. Why isn't that enough?
+        </div>
+        <div class="faq-a">
+          <p>Because task delegation ≠ decision delegation.</p>
+          <p>
+            You're delegating the "what" but not the "why" or "how to decide."
+            So your team executes tasks but still routes every decision through
+            you. You're still the critical path.
+          </p>
+          <p>
+            This course teaches you how to delegate <em>authority</em>, not just
+            work. That's when you stop being the bottleneck.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">
+          Q: Why don't you have more testimonials/case studies?
+        </div>
+        <div class="faq-a">
+          <p>
+            Most clients require strict confidentiality. Sitting CTOs can't
+            publicly admit they're working on leadership challenges — it affects
+            board perception, professional reputation, and future opportunities.
+          </p>
+          <p>
+            The testimonials I share come from clients who've moved to new roles
+            or founded their own companies and are comfortable going public.
+          </p>
+          <p>
+            But here's my proof: <strong>Money-back guarantee.</strong> If you
+            implement the system and don't get results, you get refunded. I'm
+            putting my money where my mouth is.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">Q: What's the time commitment?</div>
+        <div class="faq-a">
+          <p>
+            Each module is 30-45 minutes of video (6-7 hours total content).
+            Implementation work is 2-4 hours per week as you build your
+            frameworks and apply them with your team.
+          </p>
+          <p>Total: 3-5 hours per week for 12 weeks.</p>
+          <p>
+            That 3-5 hours is an investment that returns 20-40 hours per week
+            once the system is running. Best ROI you'll ever get.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">
+          Q: What makes this different from generic leadership training?
+        </div>
+        <div class="faq-a">
+          <p>
+            Generic leadership training is built for corporate managers. It's
+            full of platitudes that don't translate to leading technical teams.
+          </p>
+          <p>
+            <strong>This is built specifically for CTOs by a CTO.</strong> I
+            speak your language. I understand:
+          </p>
+          <ul class="bullet-list">
+            <li>Production incidents that always escalate to you at 3am</li>
+            <li>
+              Non-technical executives who don't understand why things take time
+            </li>
+            <li>The technical debt vs. velocity tradeoff</li>
+            <li>
+              Managing brilliant engineers who can build anything but struggle
+              with ownership
+            </li>
+            <li>Board pressure to "move faster with less"</li>
+          </ul>
+          <p>
+            This isn't theory — it's the exact system I used to cut my own hours
+            in half while my team's performance increased 400%.
+          </p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2>Here's Your Choice:</h2>
+
+      <p>
+        <strong>Path A:</strong> Keep being the hero. Keep working 80-hour
+        weeks. Keep hoping your team will magically become more independent.
+        (They won't — you've trained them otherwise.)
+      </p>
+
+      <p>
+        <strong>Path B:</strong> Invest $2,997 in systematically refactoring
+        your leadership architecture. Build a team that scales without you. Get
+        your life back.
+      </p>
+
+      <p style="font-size: 20px; margin: 30px 0">
+        <span class="emphasis"
+          >One path leads to burnout or replacement. The other leads to
+          promotion and freedom.</span
+        >
+      </p>
+
+      <div class="urgency-note">
+        ⏰ Only 5 enrollment spots left this month. Next cohort opens in 6
+        weeks.
+      </div>
+
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Enroll In The Course Now →</a
+        >
+        <p style="margin-top: 15px; font-size: 15px; color: #7f8c8d">
+          Instant access. Start today.
+        </p>
+      </div>
+
+      <p style="text-align: center; margin-top: 50px; font-size: 17px">
+        See you inside,
+      </p>
+      <p
+        style="
+          text-align: center;
+          font-size: 24px;
+          font-weight: 700;
+          margin-top: 8px;
+        "
+      >
+        — Mike
+      </p>
+
+      <p
+        style="
+          margin: 40px 0;
+          padding: 20px;
+          background: #fff9e6;
+          border: 2px solid #f39c12;
+          border-radius: 6px;
+          font-size: 15px;
+          text-align: center;
+        "
+      >
+        <strong>P.S.</strong> — Remember: You're protected by the money-back
+        guarantee. You either transform your team and reclaim your life, or you
+        get refunded. The only real risk is staying stuck in 80-hour weeks for
+        another year.
+      </p>
+
+      <div style="margin: 60px 0 40px 0; text-align: center">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Yes, I'm Ready To Fix This →</a
+        >
+      </div>
+    </div>
+  </body>
+</html>
