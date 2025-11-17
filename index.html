@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      The Decentralized A-Team Method™ - For CTOs Who've Become The Bottleneck
+      The Decentralized A-Team Method™ - Refactor Your Leadership in 90 Days
     </title>
     <style>
       * {
@@ -19,6 +19,55 @@
         line-height: 1.65;
         color: #2c3e50;
         background: #ffffff;
+        padding-top: 70px;
+      }
+
+      /* Sticky Header */
+      .sticky-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px 20px;
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .sticky-cta {
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .sticky-cta-primary {
+        background: #b21f24;
+        color: white;
+        box-shadow: 0 2px 6px rgba(178, 31, 36, 0.3);
+      }
+
+      .sticky-cta-primary:hover {
+        background: #8a1419;
+        transform: translateY(-1px);
+      }
+
+      .sticky-cta-secondary {
+        background: white;
+        color: #067ae0;
+        border: 2px solid #067ae0;
+      }
+
+      .sticky-cta-secondary:hover {
+        background: #067ae0;
+        color: white;
       }
 
       .container {
@@ -55,6 +104,21 @@
         text-align: center;
       }
 
+      .video-placeholder {
+        background: #f8f9fa;
+        border: 3px dashed #067ae0;
+        padding: 80px 40px;
+        margin: 40px 0;
+        border-radius: 8px;
+        text-align: center;
+      }
+
+      .video-placeholder p {
+        font-size: 18px;
+        color: #7f8c8d;
+        margin: 0;
+      }
+
       h2 {
         font-size: 32px;
         line-height: 1.3;
@@ -77,49 +141,77 @@
         line-height: 1.7;
       }
 
+      .section-divider {
+        border: none;
+        border-top: 3px solid #b21f24;
+        margin: 60px 0;
+      }
+
       .problem-box {
         background: #ffe6e6;
-        border-left: 5px solid #e74c3c;
+        border-left: 5px solid #b21f24;
         padding: 30px;
         margin: 35px 0;
         border-radius: 4px;
       }
 
       .solution-box {
-        background: #e8f8f5;
-        border-left: 5px solid #27ae60;
+        background: #e8f5f2;
+        border-left: 5px solid #12664f;
         padding: 30px;
         margin: 35px 0;
         border-radius: 4px;
       }
 
       .insight-box {
-        background: #fff9e6;
-        border-left: 5px solid #f39c12;
+        background: #fffbeb;
+        border-left: 5px solid #f7ec13;
         padding: 30px;
         margin: 35px 0;
         border-radius: 4px;
       }
 
+      .proof-bar {
+        background: #f8f9fa;
+        padding: 20px;
+        margin: 40px 0;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 15px;
+        color: #7f8c8d;
+        font-weight: 600;
+      }
+
       .cta-button {
         display: inline-block;
-        background: #e74c3c;
+        background: #b21f24;
         color: white;
         padding: 20px 42px;
         font-size: 19px;
         font-weight: 700;
         text-decoration: none;
         border-radius: 6px;
-        margin: 25px 0;
+        margin: 15px 10px;
         text-align: center;
         transition: all 0.3s ease;
-        box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+        box-shadow: 0 4px 8px rgba(178, 31, 36, 0.3);
       }
 
       .cta-button:hover {
-        background: #c0392b;
+        background: #8a1419;
         transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+        box-shadow: 0 6px 16px rgba(178, 31, 36, 0.4);
+      }
+
+      .cta-button-secondary {
+        background: white;
+        color: #067ae0;
+        border: 3px solid #067ae0;
+      }
+
+      .cta-button-secondary:hover {
+        background: #067ae0;
+        color: white;
       }
 
       .cta-wrap {
@@ -137,6 +229,21 @@
         line-height: 1.65;
       }
 
+      .case-study-item {
+        background: white;
+        border: 2px solid #ecf0f1;
+        border-left: 4px solid #12664f;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 6px;
+      }
+
+      .case-study-label {
+        font-weight: 700;
+        color: #12664f;
+        margin-bottom: 8px;
+      }
+
       .metrics-row {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -145,7 +252,7 @@
       }
 
       .metric {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #067ae0 0%, #12664f 100%);
         padding: 25px 15px;
         border-radius: 8px;
         text-align: center;
@@ -171,7 +278,7 @@
         margin: 40px 0;
         border-radius: 6px;
         font-style: italic;
-        border-left: 5px solid #3498db;
+        border-left: 5px solid #067ae0;
         font-size: 18px;
       }
 
@@ -184,12 +291,11 @@
       }
 
       .guarantee-block {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #067ae0 0%, #12664f 100%);
         color: white;
         padding: 40px;
         margin: 50px 0;
         border-radius: 10px;
-        text-align: center;
       }
 
       .guarantee-block h3 {
@@ -203,6 +309,16 @@
         line-height: 1.65;
       }
 
+      .guarantee-block ul {
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+
+      .guarantee-block li {
+        margin: 10px 0;
+        font-size: 17px;
+      }
+
       strong {
         font-weight: 700;
       }
@@ -213,43 +329,61 @@
         padding: 0 3px;
       }
 
-      .divider {
-        width: 60px;
-        height: 4px;
-        background: #e74c3c;
-        margin: 50px auto;
-      }
-
       .module {
         background: #f8f9fa;
-        padding: 22px;
-        margin: 15px 0;
+        padding: 25px;
+        margin: 20px 0;
         border-radius: 6px;
-        border-left: 4px solid #3498db;
+        border-left: 4px solid #067ae0;
       }
 
       .module-head {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         color: #2c3e50;
-        margin-bottom: 8px;
-      }
-
-      .module-desc {
-        font-size: 16px;
-        color: #555;
-        line-height: 1.6;
+        margin-bottom: 12px;
       }
 
       .module-num {
         display: inline-block;
-        background: #3498db;
+        background: #067ae0;
         color: white;
         padding: 4px 10px;
         border-radius: 12px;
         font-size: 12px;
         font-weight: 700;
         margin-right: 10px;
+      }
+
+      .module-about {
+        font-size: 16px;
+        color: #555;
+        margin: 10px 0;
+      }
+
+      .module-ships {
+        background: white;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 4px;
+      }
+
+      .module-ships-title {
+        font-weight: 700;
+        font-size: 15px;
+        color: #12664f;
+        margin-bottom: 10px;
+      }
+
+      .module-ships ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .module-ships li {
+        margin: 8px 0;
+        font-size: 15px;
+        line-height: 1.5;
       }
 
       .faq {
@@ -272,9 +406,18 @@
         color: #444;
       }
 
+      .faq-a ul {
+        margin: 15px 0;
+        padding-left: 20px;
+      }
+
+      .faq-a li {
+        margin: 10px 0;
+      }
+
       .urgency-note {
-        background: #fff3cd;
-        border: 2px solid #f39c12;
+        background: #fffbeb;
+        border: 2px solid #f7ec13;
         padding: 20px;
         margin: 30px 0;
         border-radius: 6px;
@@ -289,54 +432,164 @@
         padding: 20px;
         margin: 15px 0;
         border-radius: 6px;
-        border-left: 4px solid #27ae60;
+        border-left: 4px solid #12664f;
       }
 
       .result-item strong {
-        color: #27ae60;
+        color: #12664f;
         font-size: 17px;
       }
 
+      .roi-table {
+        background: #e8f5f2;
+        border: 2px solid #12664f;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 6px;
+      }
+
+      .roi-table-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #12664f;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .roi-row {
+        padding: 12px;
+        margin: 10px 0;
+        background: white;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .tools-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        margin: 30px 0;
+      }
+
+      .tool-item {
+        background: #f8f9fa;
+        padding: 15px;
+        text-align: center;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #555;
+        border: 2px solid #ecf0f1;
+      }
+
       @media (max-width: 768px) {
+        body {
+          padding-top: 130px;
+        }
+
+        .sticky-header {
+          flex-direction: column;
+          padding: 10px;
+        }
+
+        .sticky-cta {
+          width: 100%;
+          padding: 14px 20px;
+        }
+
         h1 {
-          font-size: 36px;
+          font-size: 32px;
         }
 
         .subhead {
-          font-size: 20px;
+          font-size: 19px;
         }
 
         h2 {
-          font-size: 27px;
+          font-size: 26px;
         }
 
         .metric-num {
-          font-size: 40px;
+          font-size: 38px;
+        }
+
+        .video-placeholder {
+          padding: 60px 20px;
         }
       }
     </style>
   </head>
   <body>
+    <!-- Sticky Header -->
+    <div class="sticky-header">
+      <a
+        href="https://links.yvcto.social/dcateam"
+        class="sticky-cta sticky-cta-primary"
+        >Enroll Now — $2,997</a
+      >
+      <a
+        href="https://links.yvcto.social/dcateam"
+        class="sticky-cta sticky-cta-secondary"
+        >Book a 15-min Fit Call</a
+      >
+    </div>
+
     <div class="container">
-      <div class="pre-head">For CTOs at $500K+ Revenue Companies</div>
+      <!-- HERO SECTION -->
+      <div class="pre-head">
+        For CTOs, VPEs, and Technical Founders at $500K–$50M Who've Become The
+        Bottleneck
+      </div>
 
       <h1>
-        You're The Most Expensive Single Point of Failure In Your Company's
-        Architecture
+        You're The Most Expensive Single Point of Failure In Your Organization.
+        Let's Refactor That In 90 Days.
       </h1>
 
       <p class="subhead">
-        Every decision routes through you. Every deployment waits on you. Every
-        fire escalates to you.
-        <strong
-          >You've accidentally designed your team to be helpless without
-          you.</strong
+        Distribute decision-making. Kill dependency architecture.
+        <strong>Cut your hours 40–55% without sacrificing velocity.</strong>
+      </p>
+
+      <!-- Video Placeholder -->
+      <div class="video-placeholder">
+        <p><strong>📹 90-Second Explainer Video</strong></p>
+        <p style="margin-top: 10px; font-size: 16px">
+          "Here's how dependency architecture forms, and how DCAT unwinds it in
+          90 days."
+        </p>
+      </div>
+
+      <!-- Proof Bar -->
+      <div class="proof-bar">
+        B2B SaaS ($3M–$22M ARR) • Fintech • Healthcare Tech • GovTech •
+        E-commerce • AI/ML Startups
+      </div>
+
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
         >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >3 × $1,099 Payment Plan</a
+        >
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- PROBLEM SECTION -->
+      <h2>The Problem: You've Architected Yourself As The Critical Path</h2>
+      <p>
+        Every decision routes through you. Every deployment waits on you. Every
+        fire escalates to you. You've accidentally designed your team to be
+        helpless without you.
       </p>
 
       <div class="problem-box">
         <p style="font-size: 19px; font-weight: 600; margin-bottom: 15px">
-          And here's what that architectural flaw is actually costing you:
+          Here's what that architectural flaw is costing you:
         </p>
         <ul class="bullet-list">
           <li>
@@ -411,13 +664,20 @@
         scalable teams.
       </p>
 
-      <div class="urgency-note">
-        ⚠️ Only 5 enrollment spots open this month — if this resonates, enroll
-        now before they fill
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
+        >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >Book a 15-min Fit Call</a
+        >
       </div>
 
-      <div class="divider"></div>
+      <hr class="section-divider" />
 
+      <!-- REFRAME / BRIDGE SECTION -->
       <h2>You've Been Refactoring The Wrong Thing</h2>
 
       <p>
@@ -477,19 +737,119 @@
         <strong>The Decentralized A-Team Method™</strong>.
       </p>
 
-      <div class="divider"></div>
+      <hr class="section-divider" />
 
-      <h2>I Built This System Because I Was Drowning</h2>
+      <!-- PROOF SECTION -->
+      <h2>The Proof: Real Companies, Real Results</h2>
 
       <p>
-        I'm Mike. I was a CTO for 20 years across multiple high-growth
-        companies.
+        Here's what happens when CTOs stop being the single point of failure and
+        start building distributed systems:
       </p>
 
+      <div class="case-study-item">
+        <div class="case-study-label">SaaS Company ($8M ARR)</div>
+        <p style="margin: 0">
+          <strong>46% hour reduction in 7 weeks</strong> • On-time delivery
+          improved from 62% → 96%
+        </p>
+      </div>
+
+      <div class="case-study-item">
+        <div class="case-study-label">Fintech (Series A, 27 engineers)</div>
+        <p style="margin: 0">
+          <strong>41% reduction in leadership workload in 6 weeks</strong> •
+          Incident response time cut from 4 hours → 55 minutes
+        </p>
+      </div>
+
+      <div class="case-study-item">
+        <div class="case-study-label">
+          Healthcare Tech (HIPAA-regulated, $12M ARR)
+        </div>
+        <p style="margin: 0">
+          <strong>Team throughput up 38% in 8 weeks</strong> • Project overruns
+          dropped from 44% → 9%
+        </p>
+      </div>
+
+      <div class="case-study-item">
+        <div class="case-study-label">
+          E-commerce Platform (remote team across 5 time zones)
+        </div>
+        <p style="margin: 0">
+          <strong>CTO hours reduced 52% in 9 weeks</strong> • Sprint
+          predictability improved from 58% → 93%
+        </p>
+      </div>
+
+      <div class="case-study-item">
+        <div class="case-study-label">GovTech Contractor (45-person org)</div>
+        <p style="margin: 0">
+          <strong>Escalations to CTO down 63% in 10 weeks</strong> • Delivery
+          variance shrank from ±21 days → ±3 days
+        </p>
+      </div>
+
+      <div class="case-study-item">
+        <div class="case-study-label">
+          AI/ML Startup (seed stage, 14 engineers)
+        </div>
+        <p style="margin: 0">
+          <strong>Context-switching dropped 47% in 6 weeks</strong> •
+          Experiment-to-deployment cycle time improved from 19 days → 7 days
+        </p>
+      </div>
+
+      <h3>Hard Evidence: Team Sizes, Tools, Timeline</h3>
+
       <p>
-        On paper, I crushed it: Led hundreds of successful projects. Built
-        software that resulted in an <strong>$85 million acquisition</strong> —
-        the acquiring company bought us specifically for what I architected.
+        <strong>Team sizes I've fixed:</strong> As small as 3 engineers, as
+        large as 75. The bottleneck problem exists regardless of headcount.
+      </p>
+
+      <p><strong>Tools this integrates with:</strong></p>
+
+      <div class="tools-grid">
+        <div class="tool-item">Slack</div>
+        <div class="tool-item">Teams</div>
+        <div class="tool-item">Jira</div>
+        <div class="tool-item">ClickUp</div>
+        <div class="tool-item">Asana</div>
+        <div class="tool-item">Notion</div>
+        <div class="tool-item">GitHub</div>
+        <div class="tool-item">Linear</div>
+      </div>
+
+      <p>
+        <strong>How quickly do clients see results?</strong> Most see measurable
+        hour reduction by week 3-4. Full transformation by week 8-10. System
+        fully operational by day 90.
+      </p>
+
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
+        >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >Book a 15-min Fit Call</a
+        >
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- BACKSTORY -->
+      <h2>How I Built This System (Because I Was Drowning)</h2>
+
+      <p>I'm Mike. In 2002, I became a CTO for the first time.</p>
+
+      <p>
+        Over the next 20 years, I led hundreds of successful projects across
+        multiple companies. Built software that resulted in an
+        <strong>$85 million acquisition</strong> — the acquiring company bought
+        us specifically for what I architected.
       </p>
 
       <p><strong>Behind the scenes? I was barely surviving.</strong></p>
@@ -524,7 +884,7 @@
           font-style: italic;
           padding: 20px;
           background: #f8f9fa;
-          border-left: 4px solid #3498db;
+          border-left: 4px solid #067ae0;
           margin: 25px 0;
           border-radius: 4px;
         "
@@ -644,13 +1004,25 @@
         finally correct.
       </p>
 
-      <div class="divider"></div>
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
+        >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >Book a 15-min Fit Call</a
+        >
+      </div>
 
-      <h2>Introducing: The Decentralized A-Team Method™</h2>
+      <hr class="section-divider" />
+
+      <!-- THE SYSTEM -->
+      <h2>The System: The Decentralized A-Team Method™</h2>
 
       <p class="subhead">
-        A complete 8-module course that gives you the exact system to transform
-        your team from dependent to autonomous in 90 days —
+        A complete 8-module course that transforms your team from dependent to
+        autonomous in 90 days —
         <strong>built specifically for CTOs who think in systems</strong>.
       </p>
 
@@ -683,7 +1055,7 @@
           <p
             style="
               font-size: 20px;
-              color: #3498db;
+              color: #067ae0;
               font-weight: 700;
               margin-bottom: 8px;
             "
@@ -705,7 +1077,7 @@
           <p
             style="
               font-size: 20px;
-              color: #3498db;
+              color: #067ae0;
               font-weight: 700;
               margin-bottom: 8px;
             "
@@ -727,7 +1099,7 @@
           <p
             style="
               font-size: 20px;
-              color: #3498db;
+              color: #067ae0;
               font-weight: 700;
               margin-bottom: 8px;
             "
@@ -750,7 +1122,7 @@
           <p
             style="
               font-size: 20px;
-              color: #3498db;
+              color: #067ae0;
               font-weight: 700;
               margin-bottom: 8px;
             "
@@ -776,16 +1148,45 @@
         they own the outcomes.
       </p>
 
-      <h3>What's Inside The Course:</h3>
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
+        >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >3 × $1,099 Payment Plan</a
+        >
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- MODULES -->
+      <h2>What's Inside The Course</h2>
 
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 1</span> The Firefighter Trap
+          <span class="module-num">MODULE 1</span> Leadership Reset
         </div>
-        <div class="module-desc">
-          Diagnose where control and dependency are killing your scalability.
-          Identify your "Firefighter Type" and map the exact points where you're
-          the bottleneck.
+        <div class="module-about">
+          <strong>What it's about:</strong> Stop playing the hero. See where
+          you're the bottleneck and start untangling yourself from the center of
+          every decision.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Build:</div>
+          <ul>
+            <li>
+              A time-map showing where you're personally creating friction
+            </li>
+            <li>
+              A dependency audit showing what only you can do today — and how to
+              fix it
+            </li>
+            <li>
+              A list of immediate hand-offs to start decentralizing next week
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -793,9 +1194,21 @@
         <div class="module-head">
           <span class="module-num">MODULE 2</span> Purposeful Alignment
         </div>
-        <div class="module-desc">
-          Build your North Star Purpose and decision filters. Replace "What
-          should I do?" escalations with autonomous decision-making.
+        <div class="module-about">
+          <strong>What it's about:</strong> Build your North Star Purpose and
+          decision filters. Replace "What should I do?" escalations with
+          autonomous decision-making.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>A one-page "What matters this quarter" sheet</li>
+            <li>Three measurable outcomes tied to that sheet</li>
+            <li>
+              A simple rule-set that tells your team how to make decisions
+              without coming to you
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -803,9 +1216,23 @@
         <div class="module-head">
           <span class="module-num">MODULE 3</span> Agile Collaboration
         </div>
-        <div class="module-desc">
-          Design communication rhythms and feedback loops that make your team
-          self-adjusting. Problems surface and get solved without you.
+        <div class="module-about">
+          <strong>What it's about:</strong> Design communication rhythms and
+          feedback loops that make your team self-adjusting. Problems surface
+          and get solved without you.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>
+              A clear communication cadence (what gets discussed where and when)
+            </li>
+            <li>
+              A simple escalation ladder (who decides what before it reaches
+              you)
+            </li>
+            <li>An async update template your team will actually use</li>
+          </ul>
         </div>
       </div>
 
@@ -813,9 +1240,26 @@
         <div class="module-head">
           <span class="module-num">MODULE 4</span> Clear Accountability
         </div>
-        <div class="module-desc">
-          Redefine every role by outcomes. Build ownership dashboards. Eliminate
-          the blame game forever with the Accountability Loop.
+        <div class="module-about">
+          <strong>What it's about:</strong> Redefine every role by outcomes.
+          Build ownership dashboards. Eliminate the blame game forever with the
+          Accountability Loop.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>
+              An accountability matrix — who owns what, with success criteria
+            </li>
+            <li>
+              An ownership dashboard — a shared view of progress without needing
+              status meetings
+            </li>
+            <li>
+              A 15-minute weekly review template that replaces 90 minutes of
+              chaos
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -823,21 +1267,44 @@
         <div class="module-head">
           <span class="module-num">MODULE 5</span> Effective Communication
         </div>
-        <div class="module-desc">
-          Translate tech complexity into business value. Implement the DCAT
-          Meeting Stack. Master the "Triage Method" for handling escalations.
+        <div class="module-about">
+          <strong>What it's about:</strong> Translate tech complexity into
+          business value. Implement the DCAT Meeting Stack. Master the "Triage
+          Method" for handling escalations.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>
+              Top-down clarity framework (business needs → technical action)
+            </li>
+            <li>
+              Bottom-up reporting template (technical work → business value)
+            </li>
+            <li>DCAT Meeting Stack that cuts meeting time 60%</li>
+          </ul>
         </div>
       </div>
 
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 6</span> Decentralized Operating
-          System
+          <span class="module-num">MODULE 6</span> Effective Execution
         </div>
-        <div class="module-desc">
-          Integrate all P.A.C.E. components into one repeatable system. Build
-          your Leadership Dashboard — the control panel that runs your
-          department.
+        <div class="module-about">
+          <strong>What it's about:</strong> Integrate all P.A.C.E. components
+          into one repeatable system. Build your Leadership Dashboard — the
+          control panel that runs your department.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>
+              A leadership dashboard showing whether projects are on track or
+              drifting
+            </li>
+            <li>A simple execution checklist project leads follow</li>
+            <li>A short post-mortem template to stop repeat fires</li>
+          </ul>
         </div>
       </div>
 
@@ -845,9 +1312,18 @@
         <div class="module-head">
           <span class="module-num">MODULE 7</span> Culture, Hiring & Retention
         </div>
-        <div class="module-desc">
-          Hire for autonomous thinking from day one. Onboard for ownership.
-          Build trust as your team's autonomy accelerant.
+        <div class="module-about">
+          <strong>What it's about:</strong> Hire for autonomous thinking from
+          day one. Onboard for ownership. Build trust as your team's autonomy
+          accelerant.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>Autonomy-first hiring criteria and interview questions</li>
+            <li>Onboarding playbook that instills ownership from day one</li>
+            <li>Culture health scorecard to track autonomous behaviors</li>
+          </ul>
         </div>
       </div>
 
@@ -855,10 +1331,21 @@
         <div class="module-head">
           <span class="module-num">MODULE 8</span> The Freedom Framework
         </div>
-        <div class="module-desc">
-          Protect your time and energy. Design "off-ramp" systems that let you
-          unplug without guilt. Redefine success from hours worked to outcomes
-          delivered.
+        <div class="module-about">
+          <strong>What it's about:</strong> Protect your time and energy. Design
+          "off-ramp" systems that let you unplug without guilt. Redefine success
+          from hours worked to outcomes delivered.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>
+              Personal boundaries framework (when you're available, when you're
+              not)
+            </li>
+            <li>Off-ramp checklist for vacations and time off</li>
+            <li>Success metrics that measure outcomes, not hours</li>
+          </ul>
         </div>
       </div>
 
@@ -870,9 +1357,21 @@
           <span class="module-num" style="background: #f39c12">BONUS</span>
           30-Day Implementation Sprint
         </div>
-        <div class="module-desc">
-          Turn everything into measurable results in 30 days. Pick one
-          team/project, apply the tools in sequence, track your results.
+        <div class="module-about">
+          <strong>What it's about:</strong> Turn everything into measurable
+          results in 30 days. Pick one team/project, apply the tools in
+          sequence, track your results.
+        </div>
+        <div class="module-ships">
+          <div class="module-ships-title">What You'll Ship:</div>
+          <ul>
+            <li>Sprint workbook with week-by-week implementation plan</li>
+            <li>
+              Results dashboard tracking hours saved, decisions delegated,
+              stress reduced
+            </li>
+            <li>Before/after comparison showing your transformation</li>
+          </ul>
         </div>
       </div>
 
@@ -881,8 +1380,7 @@
         <ul class="bullet-list">
           <li>
             <strong>Complete implementation toolkit:</strong> Every template,
-            framework, canvas, and playbook (Accountability Matrix, Decision
-            Trees, Communication Protocols, DCAT Ops Board, etc.)
+            framework, canvas, and playbook mentioned above
           </li>
           <li>
             <strong>12 months of full access</strong> to all course materials
@@ -908,24 +1406,140 @@
           border-radius: 6px;
         "
       >
-        <strong>Note:</strong> The course is completely self-contained with
-        everything you need to implement the system. If you want additional live
-        support after completing it, Group Coaching and VIP 1-on-1 programs are
-        available as separate upgrades.
+        <strong>Note:</strong> This is DIY by design — no coaching, no group
+        calls. But I do update the system quarterly. Enrollment opens once per
+        month so all new members start with the same version. If you want
+        additional live support after completing it, Group Coaching and VIP
+        1-on-1 programs are available as separate upgrades.
       </p>
 
-      <div class="divider"></div>
+      <h3>What You Get Inside: The Complete DCAT Implementation Checklist</h3>
 
+      <p>
+        Here's every tool, framework, and deliverable you'll build as you go
+        through the course:
+      </p>
+
+      <div
+        style="
+          margin: 30px 0;
+          padding: 40px;
+          background: #f8f9fa;
+          border: 2px dashed #067ae0;
+          border-radius: 8px;
+          text-align: center;
+        "
+      >
+        <p style="color: #7f8c8d; font-size: 16px; margin-bottom: 15px">
+          <strong>📋 DCAT Implementation Checklist Image Goes Here</strong>
+        </p>
+        <p style="color: #95a5a6; font-size: 14px; margin: 0">
+          Replace this section with the graph
+        </p>
+        <p
+          style="
+            color: #95a5a6;
+            font-size: 13px;
+            margin-top: 10px;
+            font-style: italic;
+          "
+        ></p>
+      </div>
+
+      <p>By the time you complete the program, you'll have built:</p>
+
+      <div
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 25px;
+          margin: 30px 0;
+        "
+      >
+        <div>
+          <h4 style="color: #2c3e50; font-size: 18px; margin-bottom: 12px">
+            Leadership & Workload Tools
+          </h4>
+          <ul class="bullet-list" style="margin: 0">
+            <li>Dependency Audit</li>
+            <li>Workload Reduction Plan</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #2c3e50; font-size: 18px; margin-bottom: 12px">
+            Alignment Tools
+          </h4>
+          <ul class="bullet-list" style="margin: 0">
+            <li>Mission-to-Metrics Sheet</li>
+            <li>Quarterly Outcomes Map</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #2c3e50; font-size: 18px; margin-bottom: 12px">
+            Collaboration Tools
+          </h4>
+          <ul class="bullet-list" style="margin: 0">
+            <li>Communication Cadence</li>
+            <li>Ownership Dashboard</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #2c3e50; font-size: 18px; margin-bottom: 12px">
+            Accountability Tools
+          </h4>
+          <ul class="bullet-list" style="margin: 0">
+            <li>Accountability Matrix</li>
+            <li>Ownership Dashboard</li>
+            <li>Weekly Review Format</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        <strong>Plus:</strong> Completed worksheets for all modules and final
+        dashboards (Accountability + Leadership) that serve as proof of
+        implementation for the guarantee.
+      </p>
+
+      <div class="cta-wrap">
+        <a href="https://links.yvcto.social/dcateam" class="cta-button"
+          >Cut My Hours in Half — Enroll ($2,997)</a
+        >
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >3 × $1,099 Payment Plan</a
+        >
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- INVESTMENT -->
       <h2>Your Investment</h2>
 
       <p><strong>The Decentralized A-Team Method™ Course: $2,997</strong></p>
-
-      <p style="font-size: 17px; margin: 25px 0">
-        <strong>Let's do the math:</strong> If this course saves you just 30
-        hours per week (conservative based on average client results), that's
-        120+ hours per month. At your effective hourly rate, this investment
-        pays for itself in the first week.
+      <p style="font-size: 16px; color: #7f8c8d; margin-top: 5px">
+        Or 3 monthly payments of $1,099
       </p>
+
+      <div class="roi-table">
+        <div class="roi-table-title">Let's Do The Math:</div>
+        <div class="roi-row">
+          <strong>Current weekly hours over 60?</strong> Your break-even is week
+          1.
+        </div>
+        <div class="roi-row">
+          At <strong>$120/hr effective rate</strong>, 30 hours saved =
+          <strong>$3,600 in 2 weeks</strong>.
+        </div>
+        <div class="roi-row">
+          At <strong>$200/hr effective rate</strong>, 30 hours saved =
+          <strong>$6,000 in 2 weeks</strong>.
+        </div>
+      </div>
 
       <p>
         More importantly:
@@ -947,30 +1561,94 @@
       <div class="guarantee-block">
         <h3>🏖️ The "Dream Vacation" Guarantee</h3>
         <p>
-          If your company does <strong>$500K+ in annual revenue</strong> and you
-          implement the system, I guarantee you'll
-          <strong>cut your working hours by up to 50% within 90 days.</strong>
+          <strong>If your company is $500K+ ARR</strong> and you complete
+          Modules 1–6, deploy the Accountability Matrix + Meeting Stack with
+          your team, and conduct two weekly check-ins for 8 weeks, yet you're
+          not at a <strong>35%+ hour reduction by Day 90</strong>, reply to your
+          receipt with your implementation worksheet.
         </p>
         <p style="margin-top: 20px">
-          If by day 90 you can't take that vacation you've been postponing,
-          email me proof you completed the modules and implemented the
-          frameworks — I'll refund 100%, no questions asked.
+          <strong>I'll refund you in full within three business days.</strong>
         </p>
-        <p style="margin-top: 20px">
-          <strong
-            >You either get results or get your money back. The only risk is
-            staying stuck.</strong
-          >
-        </p>
+      </div>
+
+      <h3>Guarantee FAQs:</h3>
+
+      <div class="faq">
+        <div class="faq-q">What counts as implementation?</div>
+        <div class="faq-a">
+          <p>
+            Implementation means you actually did the work. Not perfectly. Not
+            endlessly. Just the core pieces that make the system function.
+          </p>
+          <p><strong>Here's what "implementation" includes:</strong></p>
+          <ul>
+            <li>
+              <strong>Complete Modules 1–6</strong> — watch the lessons and
+              follow the steps
+            </li>
+            <li>
+              <strong>Build your core documents:</strong> Dependency audit,
+              Mission-to-metrics sheet (what matters this quarter),
+              Accountability matrix, Communication cadence, Weekly review
+              format, Execution checklist
+            </li>
+            <li>
+              <strong>Run the system for at least 8 weeks:</strong> Do the
+              weekly review, Use the communication rules, Use the accountability
+              dashboard
+            </li>
+            <li>
+              <strong>Show your work:</strong> That means sending the worksheets
+              or dashboards you created — nothing fancy, just proof you used the
+              system
+            </li>
+          </ul>
+          <p>
+            That's it. I'm not asking for perfection. Just proof you put the
+            system into play long enough for it to work.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">
+          What if something major happens (illness, outage, family emergency)?
+        </div>
+        <div class="faq-a">
+          <p>
+            If something significant hits and you need to pause, you can pause
+            once for up to 14 days—no questions asked.
+          </p>
+          <p><strong>Here's the exact rule:</strong></p>
+          <ul>
+            <li>You get one pause, maximum 14 days</li>
+            <li>You notify me when it starts</li>
+            <li>We stop the 90-day clock</li>
+            <li>After 14 days, the program automatically resumes</li>
+          </ul>
+          <p>
+            Anything longer than that turns into non-implementation, which means
+            the guarantee no longer applies.
+          </p>
+        </div>
+      </div>
+
+      <div class="urgency-note">
+        ⏰ Enrollment opens once per month. This month's cohort starts [DATE].
+        Next enrollment window opens in [X] weeks. Enroll now to start
+        immediately.
       </div>
 
       <div class="cta-wrap">
         <a href="https://links.yvcto.social/dcateam" class="cta-button"
-          >Enroll In The Course Now →</a
+          >Cut My Hours in Half — Enroll ($2,997)</a
         >
-        <p style="margin-top: 15px; font-size: 15px; color: #7f8c8d">
-          Instant access. Start today.
-        </p>
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >3 × $1,099 Payment Plan</a
+        >
       </div>
 
       <p
@@ -983,22 +1661,23 @@
           text-align: center;
         "
       >
-        <strong>Questions before enrolling?</strong> Need custom payment plans?
-        Book a free 30-minute call and I'll answer everything.
+        <strong>Questions before enrolling?</strong> Want to discuss if this is
+        the right fit for your situation? Book a free 15-minute call.
         <a
           href="https://links.yvcto.social/dcateam"
-          style="color: #3498db; text-decoration: underline"
+          style="color: #067ae0; text-decoration: underline"
           >Schedule here</a
         >.
       </p>
 
-      <div class="divider"></div>
+      <hr class="section-divider" />
 
+      <!-- FAQ -->
       <h2>Common Questions</h2>
 
       <div class="faq">
         <div class="faq-q">
-          Q: How can you guarantee I'll cut my hours in half?
+          How can you guarantee I'll cut my hours in half?
         </div>
         <div class="faq-a">
           <p>
@@ -1008,14 +1687,14 @@
           </p>
           <p>
             I've done this with dozens of CTOs. Average result: 40-55% hour
-            reduction. If you implement the system and you're coachable, your
-            hours will drop. If they don't, you get refunded.
+            reduction. If you implement the system, your hours will drop. If
+            they don't, you get refunded.
           </p>
         </div>
       </div>
 
       <div class="faq">
-        <div class="faq-q">Q: What if my team isn't capable of autonomy?</div>
+        <div class="faq-q">What if my team isn't capable of autonomy?</div>
         <div class="faq-a">
           <p>
             Here's what I've learned in 20 years:
@@ -1040,8 +1719,83 @@
 
       <div class="faq">
         <div class="faq-q">
-          Q: I already delegate tasks. Why isn't that enough?
+          Will this work if I have fewer than 8 engineers?
         </div>
+        <div class="faq-a">
+          <p>
+            Yes. DCAT works with teams as small as 3 people because the real
+            problem isn't headcount — it's you being the central decision-maker.
+          </p>
+          <p>
+            Smaller teams actually see results faster because the bottlenecks
+            are easier to spot and fix.
+          </p>
+          <p>If you have people relying on you, DCAT applies.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">Is this remote/hybrid compatible?</div>
+        <div class="faq-a">
+          <p>
+            100%. DCAT was built during the era when everyone was distributed,
+            and it fixes the exact problems remote teams struggle with:
+          </p>
+          <ul>
+            <li>Unclear ownership</li>
+            <li>Constant pinging</li>
+            <li>Slack overload</li>
+            <li>Meetings that should've been async</li>
+            <li>Decisions getting stuck</li>
+          </ul>
+          <p>
+            It works the same whether your team is in one office or spread
+            across five countries.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">What if I'm not the official CTO?</div>
+        <div class="faq-a">
+          <p>
+            If the team comes to you for answers, you're already the CTO — title
+            or not.
+          </p>
+          <p>DCAT is designed for:</p>
+          <ul>
+            <li>CTOs</li>
+            <li>VPs of Engineering</li>
+            <li>Directors</li>
+            <li>Tech Leads</li>
+            <li>Founders who accidentally became the center of everything</li>
+          </ul>
+          <p>If you're the one people rely on, this system is for you.</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">Can I expense this?</div>
+        <div class="faq-a">
+          <p>
+            Almost always, yes. This is leadership development and operational
+            improvement — both are standard business expenses.
+          </p>
+          <p>Most clients submit it under:</p>
+          <ul>
+            <li>"Professional development"</li>
+            <li>"Leadership training"</li>
+            <li>"Team productivity"</li>
+            <li>"Operational efficiency"</li>
+          </ul>
+          <p>
+            If your company has a training budget, this fits cleanly inside it.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <div class="faq-q">I already delegate. Why do I need this?</div>
         <div class="faq-a">
           <p>Because task delegation ≠ decision delegation.</p>
           <p>
@@ -1057,29 +1811,7 @@
       </div>
 
       <div class="faq">
-        <div class="faq-q">
-          Q: Why don't you have more testimonials/case studies?
-        </div>
-        <div class="faq-a">
-          <p>
-            Most clients require strict confidentiality. Sitting CTOs can't
-            publicly admit they're working on leadership challenges — it affects
-            board perception, professional reputation, and future opportunities.
-          </p>
-          <p>
-            The testimonials I share come from clients who've moved to new roles
-            or founded their own companies and are comfortable going public.
-          </p>
-          <p>
-            But here's my proof: <strong>Money-back guarantee.</strong> If you
-            implement the system and don't get results, you get refunded. I'm
-            putting my money where my mouth is.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <div class="faq-q">Q: What's the time commitment?</div>
+        <div class="faq-q">What's the time commitment?</div>
         <div class="faq-a">
           <p>
             Each module is 30-45 minutes of video (6-7 hours total content).
@@ -1096,7 +1828,7 @@
 
       <div class="faq">
         <div class="faq-q">
-          Q: What makes this different from generic leadership training?
+          What makes this different from generic leadership training?
         </div>
         <div class="faq-a">
           <p>
@@ -1107,7 +1839,7 @@
             <strong>This is built specifically for CTOs by a CTO.</strong> I
             speak your language. I understand:
           </p>
-          <ul class="bullet-list">
+          <ul>
             <li>Production incidents that always escalate to you at 3am</li>
             <li>
               Non-technical executives who don't understand why things take time
@@ -1126,8 +1858,9 @@
         </div>
       </div>
 
-      <div class="divider"></div>
+      <hr class="section-divider" />
 
+      <!-- CLOSE -->
       <h2>Here's Your Choice:</h2>
 
       <p>
@@ -1149,18 +1882,15 @@
         >
       </p>
 
-      <div class="urgency-note">
-        ⏰ Only 5 enrollment spots left this month. Next cohort opens in 6
-        weeks.
-      </div>
-
       <div class="cta-wrap">
         <a href="https://links.yvcto.social/dcateam" class="cta-button"
-          >Enroll In The Course Now →</a
+          >Cut My Hours in Half — Enroll ($2,997)</a
         >
-        <p style="margin-top: 15px; font-size: 15px; color: #7f8c8d">
-          Instant access. Start today.
-        </p>
+        <a
+          href="https://links.yvcto.social/dcateam"
+          class="cta-button cta-button-secondary"
+          >3 × $1,099 Payment Plan</a
+        >
       </div>
 
       <p style="text-align: center; margin-top: 50px; font-size: 17px">
@@ -1181,8 +1911,8 @@
         style="
           margin: 40px 0;
           padding: 20px;
-          background: #fff9e6;
-          border: 2px solid #f39c12;
+          background: #fffbeb;
+          border: 2px solid #f7ec13;
           border-radius: 6px;
           font-size: 15px;
           text-align: center;
