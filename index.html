@@ -229,21 +229,6 @@
         line-height: 1.65;
       }
 
-      .case-study-item {
-        background: white;
-        border: 2px solid #ecf0f1;
-        border-left: 4px solid #12664f;
-        padding: 20px;
-        margin: 15px 0;
-        border-radius: 6px;
-      }
-
-      .case-study-label {
-        font-weight: 700;
-        color: #12664f;
-        margin-bottom: 8px;
-      }
-
       .metrics-row {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -309,14 +294,22 @@
         line-height: 1.65;
       }
 
-      .guarantee-block ul {
-        margin: 20px 0;
-        padding-left: 20px;
+      .guarantee-terms-box {
+        background: #f8f9fa;
+        border: 1px solid #ddd;
+        padding: 25px;
+        margin: 40px 0;
+        border-radius: 6px;
       }
 
-      .guarantee-block li {
-        margin: 10px 0;
-        font-size: 17px;
+      .guarantee-terms-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #555;
+        margin-bottom: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
 
       strong {
@@ -331,17 +324,17 @@
 
       .module {
         background: #f8f9fa;
-        padding: 25px;
-        margin: 20px 0;
+        padding: 30px;
+        margin: 25px 0;
         border-radius: 6px;
         border-left: 4px solid #067ae0;
       }
 
       .module-head {
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 700;
         color: #2c3e50;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
       }
 
       .module-num {
@@ -355,35 +348,33 @@
         margin-right: 10px;
       }
 
-      .module-about {
+      .module-subtitle {
         font-size: 16px;
         color: #555;
-        margin: 10px 0;
+        margin: 12px 0;
+        font-style: italic;
       }
 
-      .module-ships {
-        background: white;
-        padding: 15px;
-        margin-top: 15px;
-        border-radius: 4px;
+      .module-section {
+        margin: 20px 0;
       }
 
-      .module-ships-title {
+      .module-section-title {
         font-weight: 700;
-        font-size: 15px;
-        color: #12664f;
+        font-size: 16px;
+        color: #2c3e50;
         margin-bottom: 10px;
       }
 
-      .module-ships ul {
-        margin: 0;
+      .module-section ul {
+        margin: 10px 0;
         padding-left: 20px;
       }
 
-      .module-ships li {
+      .module-section li {
         margin: 8px 0;
-        font-size: 15px;
-        line-height: 1.5;
+        font-size: 16px;
+        line-height: 1.6;
       }
 
       .faq {
@@ -413,17 +404,6 @@
 
       .faq-a li {
         margin: 10px 0;
-      }
-
-      .urgency-note {
-        background: #fffbeb;
-        border: 2px solid #f7ec13;
-        padding: 20px;
-        margin: 30px 0;
-        border-radius: 6px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 600;
       }
 
       .result-item {
@@ -747,65 +727,30 @@
         start building distributed systems:
       </p>
 
-      <div class="case-study-item">
-        <div class="case-study-label">SaaS Company ($8M ARR)</div>
-        <p style="margin: 0">
-          <strong>46% hour reduction in 7 weeks</strong> • On-time delivery
-          improved from 62% → 96%
+      <div
+        style="
+          margin: 40px 0;
+          padding: 40px;
+          background: #f8f9fa;
+          border: 2px dashed #067ae0;
+          border-radius: 8px;
+          text-align: center;
+        "
+      >
+        <p style="color: #7f8c8d; font-size: 16px; margin-bottom: 15px">
+          <strong>📊 Results Chart Goes Here</strong>
         </p>
-      </div>
-
-      <div class="case-study-item">
-        <div class="case-study-label">Fintech (Series A, 27 engineers)</div>
-        <p style="margin: 0">
-          <strong>41% reduction in leadership workload in 6 weeks</strong> •
-          Incident response time cut from 4 hours → 55 minutes
-        </p>
-      </div>
-
-      <div class="case-study-item">
-        <div class="case-study-label">
-          Healthcare Tech (HIPAA-regulated, $12M ARR)
-        </div>
-        <p style="margin: 0">
-          <strong>Team throughput up 38% in 8 weeks</strong> • Project overruns
-          dropped from 44% → 9%
-        </p>
-      </div>
-
-      <div class="case-study-item">
-        <div class="case-study-label">
-          E-commerce Platform (remote team across 5 time zones)
-        </div>
-        <p style="margin: 0">
-          <strong>CTO hours reduced 52% in 9 weeks</strong> • Sprint
-          predictability improved from 58% → 93%
-        </p>
-      </div>
-
-      <div class="case-study-item">
-        <div class="case-study-label">GovTech Contractor (45-person org)</div>
-        <p style="margin: 0">
-          <strong>Escalations to CTO down 63% in 10 weeks</strong> • Delivery
-          variance shrank from ±21 days → ±3 days
-        </p>
-      </div>
-
-      <div class="case-study-item">
-        <div class="case-study-label">
-          AI/ML Startup (seed stage, 14 engineers)
-        </div>
-        <p style="margin: 0">
-          <strong>Context-switching dropped 47% in 6 weeks</strong> •
-          Experiment-to-deployment cycle time improved from 19 days → 7 days
+        <p style="color: #95a5a6; font-size: 14px; margin: 0">
+          Replace this section with the consolidated results chart showing
+          client outcomes across industries
         </p>
       </div>
 
       <h3>Hard Evidence: Team Sizes, Tools, Timeline</h3>
 
       <p>
-        <strong>Team sizes I've fixed:</strong> As small as 3 engineers, as
-        large as 75. The bottleneck problem exists regardless of headcount.
+        <strong>Team sizes I've worked with:</strong> As small as 3 engineers,
+        as large as 75. The bottleneck problem exists regardless of headcount.
       </p>
 
       <p><strong>Tools this integrates with:</strong></p>
@@ -840,43 +785,63 @@
 
       <hr class="section-divider" />
 
-      <!-- BACKSTORY -->
-      <h2>How I Built This System (Because I Was Drowning)</h2>
+      <!-- COST OF STAYING STUCK -->
+      <h2>The Cost of Staying Stuck</h2>
 
-      <p>I'm Mike. In 2002, I became a CTO for the first time.</p>
+      <p>Here's what happens if you don't fix this:</p>
+
+      <ul class="bullet-list">
+        <li>
+          <strong>Another year of 80-hour weeks</strong> while your family life
+          deteriorates
+        </li>
+        <li>
+          <strong>Watching your best engineers leave</strong> because the chaos
+          is unsustainable
+        </li>
+        <li>
+          <strong>Getting passed over for VP again</strong> because you're "too
+          tactical"
+        </li>
+      </ul>
 
       <p>
-        Over the next 20 years, I led hundreds of successful projects across
-        multiple companies. Built software that resulted in an
-        <strong>$85 million acquisition</strong> — the acquiring company bought
-        us specifically for what I architected.
+        The brutal reality?
+        <strong>You're one burnout away from being replaced</strong> by someone
+        who knows how to scale beyond themselves.
+      </p>
+
+      <hr class="section-divider" />
+
+      <!-- BACKSTORY (SHORTENED BY 25%) -->
+      <h2>How I Built This System (Because I Was Drowning Too)</h2>
+
+      <p>I'm Mike. I became a CTO in 2002.</p>
+
+      <p>
+        Over 20 years, I led hundreds of successful projects. Built software
+        that resulted in an
+        <strong>$85 million acquisition</strong>.
       </p>
 
       <p><strong>Behind the scenes? I was barely surviving.</strong></p>
 
       <p>
-        100-hour weeks. Every week. For years. Missing my kids growing up. My
-        wife drafting divorce papers. Four hours of sleep. Living on caffeine
-        and stress.
-      </p>
-
-      <p>
-        My team wasn't hitting their potential. Projects constantly slipped. I
-        was the bottleneck on everything.
+        100-hour weeks. Missing my kids growing up. Four hours of sleep. Living
+        on caffeine and stress. My wife was drafting divorce papers.
       </p>
 
       <p>
         Every leadership book told me to "delegate more" and "trust my team."
-        Useless advice. I <em>was</em> delegating tasks. But I was still the
-        single point of failure for every decision.
+        Useless. I <em>was</em> delegating tasks. But I was still the single
+        point of failure for every decision.
       </p>
 
       <p><strong>Then I had my breakthrough.</strong></p>
 
       <p>
-        Driving to another management meeting, half-listening to sports radio
-        complaining about the Dodgers' manager Dave Roberts, the host said
-        something that stopped me:
+        Driving to another meeting, half-listening to sports radio, the host
+        said something that stopped me cold:
       </p>
 
       <p
@@ -889,38 +854,25 @@
           border-radius: 4px;
         "
       >
-        "Sure, players need to perform at 100%. But when a talented team
-        consistently underperforms, that's not a talent problem — it's a systems
-        problem. The manager is responsible for creating the conditions where
-        they CAN perform."
+        "When a talented team consistently underperforms, that's not a talent
+        problem — it's a systems problem."
       </p>
 
       <p><strong>Holy shit.</strong></p>
 
       <p>
-        I didn't have a team problem. I had an <em>architecture</em> problem.
-      </p>
-
-      <p>
-        My team wasn't underperforming because they were incompetent. They were
-        underperforming because I had architected a system where every decision
-        had to flow through me.
-      </p>
-
-      <p>
         <span class="emphasis"
-          >I had designed myself as the critical path. The bottleneck was
-          ME.</span
+          >I didn't have a team problem. I had an architecture problem. I had
+          designed myself as the critical path.</span
         >
       </p>
 
       <p>
         That day, I started building what became The Decentralized A-Team
-        Method. I spent 90 days systematically refactoring my leadership the
-        same way I'd refactor code.
+        Method. I spent 90 days systematically refactoring my leadership.
       </p>
 
-      <h3>Here's What Happened:</h3>
+      <h3>The Results:</h3>
 
       <div class="metrics-row">
         <div class="metric">
@@ -946,21 +898,12 @@
         </div>
       </div>
 
-      <p>
-        <strong>But the numbers don't capture what actually changed:</strong>
-      </p>
-
-      <div class="result-item">
-        <strong>Week 3:</strong> My senior engineer deployed a major feature
-        without asking for my approval. It worked perfectly. I realized he'd
-        been capable of this the whole time — he just needed permission.
-      </div>
+      <p><strong>But the real transformation was this:</strong></p>
 
       <div class="result-item">
         <strong>Week 5:</strong> A production incident happened at 2am. My team
         debugged it, deployed a fix, and documented the postmortem. I found out
-        about it the next morning when I read their summary. I didn't lose a
-        minute of sleep.
+        the next morning. I didn't lose a minute of sleep.
       </div>
 
       <div class="result-item">
@@ -969,27 +912,14 @@
       </div>
 
       <div class="result-item">
-        <strong>Week 9:</strong> My CEO pulled me aside: "I don't know what
-        you've changed, but the dev team is shipping faster than ever and you
-        seem... calmer. Whatever you're doing, keep doing it."
-      </div>
-
-      <div class="result-item">
         <strong>Week 12:</strong> My wife and I went on our first vacation in 4
         years. Phone completely off for 7 days. The team didn't just survive —
-        they thrived. Two team members later told me it was the first time they
-        felt truly trusted.
-      </div>
-
-      <div class="quote-box">
-        "His wealth of experience was evident from day one. I'm confident that
-        he will add tremendous value to any team."
-        <div class="quote-author">— Jon Blaylock, Founder & CEO, 3Lock Inc</div>
+        they thrived.
       </div>
 
       <p>
-        Since building this system, I've used it with dozens of CTOs across
-        companies from $500K to $50M+ in revenue.
+        Since then, I've used this with dozens of CTOs across companies from
+        $500K to $50M+ in revenue.
       </p>
 
       <p>
@@ -999,10 +929,11 @@
         >
       </p>
 
-      <p>
-        Not because they're working harder. Because the <em>architecture</em> is
-        finally correct.
-      </p>
+      <div class="quote-box">
+        "His wealth of experience was evident from day one. I'm confident that
+        he will add tremendous value to any team."
+        <div class="quote-author">— Jon Blaylock, Founder & CEO, 3Lock Inc</div>
+      </div>
 
       <div class="cta-wrap">
         <a href="https://links.yvcto.social/dcateam" class="cta-button"
@@ -1130,221 +1061,360 @@
             E — Effective Communication
           </p>
           <p>
-            <strong>The Problem:</strong> Your CEO doesn't understand your
-            roadmap. Your team doesn't understand business priorities. You're
-            constantly translating.
+            <strong>The Problem:</strong> Your CEO doesn't understand why
+            engineering takes time. Your engineers don't understand what the
+            business values. You're stuck translating both ways, all day.
           </p>
           <p style="margin-top: 8px">
-            <strong>The Fix:</strong> Implement top-down clarity (business →
-            tech) and bottom-up reporting (tech → business value). Use the DCAT
-            Meeting Stack to cut meeting time 60% while improving alignment.
+            <strong>The Fix:</strong> Build shared language frameworks. Teach
+            your team to translate technical work into business value. Cut
+            meeting overhead 60% while increasing alignment.
           </p>
         </div>
       </div>
 
-      <p>
-        <strong>When these four components integrate:</strong> Your team stops
-        waiting for you to tell them what to do... and starts operating like
-        they own the outcomes.
-      </p>
+      <h3>The Modules: What You'll Actually Build</h3>
 
-      <div class="cta-wrap">
-        <a href="https://links.yvcto.social/dcateam" class="cta-button"
-          >Cut My Hours in Half — Enroll ($2,997)</a
-        >
-        <a
-          href="https://links.yvcto.social/dcateam"
-          class="cta-button cta-button-secondary"
-          >3 × $1,099 Payment Plan</a
-        >
-      </div>
-
-      <hr class="section-divider" />
-
-      <!-- MODULES -->
-      <h2>What's Inside The Course</h2>
-
+      <!-- MODULE 1 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 1</span> Leadership Reset
+          <span class="module-num">MODULE 1</span> Leadership Reset: Stop Being
+          the Bottleneck
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Stop playing the hero. See where
-          you're the bottleneck and start untangling yourself from the center of
-          every decision.
+        <div class="module-subtitle">
+          What this module is really about: Seeing exactly how you're creating
+          the chaos you're drowning in — and removing yourself from the center
+          of every decision.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Build:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
+          <ul>
+            <li>Identify where you're unintentionally holding up the team.</li>
+            <li>
+              Spot tasks only you are doing that should've been delegated months
+              ago.
+            </li>
+            <li>
+              Clear the hidden friction that keeps you working late nights and
+              weekends.
+            </li>
+            <li>Start shifting work off your plate within days, not months.</li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
           <ul>
             <li>
-              A time-map showing where you're personally creating friction
+              <strong>Time & Friction Map</strong> — shows where you're the
+              slowdown.
             </li>
             <li>
-              A dependency audit showing what only you can do today — and how to
-              fix it
+              <strong>Dependency Audit</strong> — what only you do today and how
+              to fix it.
             </li>
             <li>
-              A list of immediate hand-offs to start decentralizing next week
+              <strong>Rapid Delegation List</strong> — your first wave of
+              handoffs to free hours immediately.
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 2 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 2</span> Purposeful Alignment
+          <span class="module-num">MODULE 2</span> Purposeful Alignment: Make
+          the Team Self-Directing
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Build your North Star Purpose and
-          decision filters. Replace "What should I do?" escalations with
-          autonomous decision-making.
+        <div class="module-subtitle">
+          What this module is really about: Replacing constant "What should I
+          do?" escalations with a team that makes decisions without you.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
           <ul>
-            <li>A one-page "What matters this quarter" sheet</li>
-            <li>Three measurable outcomes tied to that sheet</li>
             <li>
-              A simple rule-set that tells your team how to make decisions
-              without coming to you
+              Define what actually matters this quarter — clearly enough that
+              the team can act on it.
+            </li>
+            <li>
+              Set decision filters that remove ambiguity and stop sideways work.
+            </li>
+            <li>
+              Get everyone aligned without repeating yourself 12 times a week.
+            </li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
+          <ul>
+            <li>
+              <strong>Quarterly Outcomes Sheet</strong> — the one-page "here's
+              what matters" guide.
+            </li>
+            <li>
+              <strong>Decision Filters</strong> — rules your team uses to make
+              decisions without asking you.
+            </li>
+            <li>
+              <strong>Mission-to-Metrics Map</strong> — translates goals into
+              specific, measurable outcomes.
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 3 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 3</span> Agile Collaboration
+          <span class="module-num">MODULE 3</span> Agile Collaboration: Build a
+          Team That Adjusts Automatically
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Design communication rhythms and
-          feedback loops that make your team self-adjusting. Problems surface
-          and get solved without you.
+        <div class="module-subtitle">
+          What this module is really about: Creating communication systems that
+          run without you, so problems surface and get solved before they hit
+          your desk.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
+          <ul>
+            <li>Eliminate random DMs and chaotic updates.</li>
+            <li>
+              Build a communication rhythm your team can follow without
+              babysitting.
+            </li>
+            <li>Get visibility without micromanaging anyone.</li>
+            <li>
+              Reduce escalations, confusion, and "Hey quick question…"
+              interruptions.
+            </li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
           <ul>
             <li>
-              A clear communication cadence (what gets discussed where and when)
+              <strong>Communication Cadence</strong> — what gets discussed,
+              where, and when.
             </li>
             <li>
-              A simple escalation ladder (who decides what before it reaches
-              you)
+              <strong>Escalation Ladder</strong> — who handles what before it
+              ever reaches you.
             </li>
-            <li>An async update template your team will actually use</li>
+            <li>
+              <strong>Async Update Template</strong> — weekly updates your team
+              will actually send.
+            </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 4 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 4</span> Clear Accountability
+          <span class="module-num">MODULE 4</span> Clear Accountability: End
+          Confusion, Blame, and Guesswork
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Redefine every role by outcomes.
-          Build ownership dashboards. Eliminate the blame game forever with the
-          Accountability Loop.
+        <div class="module-subtitle">
+          What this module is really about: Every role, every responsibility,
+          every project — crystal clear. No more "I thought they were doing it."
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
+          <ul>
+            <li>Define ownership so clearly no one can avoid it.</li>
+            <li>End finger-pointing and ambiguity permanently.</li>
+            <li>
+              Build a system that makes progress obvious without constant
+              check-ins.
+            </li>
+            <li>Turn accountability from "awkward" to automatic.</li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
           <ul>
             <li>
-              An accountability matrix — who owns what, with success criteria
+              <strong>Accountability Matrix</strong> — who owns what, with
+              success criteria.
             </li>
             <li>
-              An ownership dashboard — a shared view of progress without needing
-              status meetings
+              <strong>Ownership Dashboard</strong> — a shared view of progress
+              without needing status meetings.
             </li>
             <li>
-              A 15-minute weekly review template that replaces 90 minutes of
-              chaos
+              <strong>15-Minute Weekly Review</strong> — replaces 90 minutes of
+              chaos.
             </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 5 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 5</span> Effective Communication
+          <span class="module-num">MODULE 5</span> Effective Communication:
+          Translate Tech → Business (and Back)
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Translate tech complexity into
-          business value. Implement the DCAT Meeting Stack. Master the "Triage
-          Method" for handling escalations.
+        <div class="module-subtitle">
+          What this module is really about: Making your CEO understand what the
+          hell your team is doing — and helping your team understand what the
+          business actually cares about.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
           <ul>
             <li>
-              Top-down clarity framework (business needs → technical action)
+              Explain technical work in business terms leadership finally
+              understands.
+            </li>
+            <li>Turn scattered updates into strategic communication.</li>
+            <li>Cut meeting time dramatically while increasing alignment.</li>
+            <li>
+              Stop the constant translation work you've been doing for years.
+            </li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
+          <ul>
+            <li>
+              <strong>Top-Down Clarity Framework</strong> — business needs →
+              technical action.
             </li>
             <li>
-              Bottom-up reporting template (technical work → business value)
+              <strong>Bottom-Up Reporting Template</strong> — technical work →
+              business value.
             </li>
-            <li>DCAT Meeting Stack that cuts meeting time 60%</li>
+            <li>
+              <strong>DCAT Meeting Stack</strong> — cuts meeting time by 60% and
+              boosts clarity.
+            </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 6 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 6</span> Effective Execution
+          <span class="module-num">MODULE 6</span> Effective Execution: Build a
+          System That Runs the Department
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Integrate all P.A.C.E. components
-          into one repeatable system. Build your Leadership Dashboard — the
-          control panel that runs your department.
+        <div class="module-subtitle">
+          What this module is really about: Combining everything into one
+          repeatable operating system that makes the team predictable,
+          consistent, and low-drama.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
           <ul>
             <li>
-              A leadership dashboard showing whether projects are on track or
-              drifting
+              Bring clarity, collaboration, communication, and accountability
+              together.
             </li>
-            <li>A simple execution checklist project leads follow</li>
-            <li>A short post-mortem template to stop repeat fires</li>
+            <li>
+              Build a central dashboard that keeps projects on track without
+              status calls.
+            </li>
+            <li>Stop surprises, missed deadlines, and eleventh-hour chaos.</li>
+            <li>Run the department with far less effort.</li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
+          <ul>
+            <li>
+              <strong>Leadership Dashboard</strong> — the control panel that
+              runs your department.
+            </li>
+            <li>
+              <strong>Execution Checklist</strong> — for project leads to follow
+              without oversight.
+            </li>
+            <li>
+              <strong>Post-Mortem Template</strong> — prevents repeat fires
+              permanently.
+            </li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 7 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 7</span> Culture, Hiring & Retention
+          <span class="module-num">MODULE 7</span> Build a Team That Runs Itself
+          (Culture, Trust & Retention)
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Hire for autonomous thinking from
-          day one. Onboard for ownership. Build trust as your team's autonomy
-          accelerant.
+        <div class="module-subtitle">
+          What this module is really about: Creating a team that thinks for
+          itself so you're not babysitting adults every day.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
           <ul>
-            <li>Autonomy-first hiring criteria and interview questions</li>
-            <li>Onboarding playbook that instills ownership from day one</li>
-            <li>Culture health scorecard to track autonomous behaviors</li>
+            <li>Hire people who operate with autonomy.</li>
+            <li>Onboard new hires into a culture of ownership.</li>
+            <li>Build trust that speeds up execution, not slows it down.</li>
+            <li>
+              Track culture in a way that predicts retention — not burnout.
+            </li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
+          <ul>
+            <li><strong>Autonomy-First Hiring Blueprint</strong></li>
+            <li><strong>Culture Health Scorecard</strong></li>
+            <li><strong>Ownership Onboarding Playbook</strong></li>
           </ul>
         </div>
       </div>
 
+      <!-- MODULE 8 -->
       <div class="module">
         <div class="module-head">
-          <span class="module-num">MODULE 8</span> The Freedom Framework
+          <span class="module-num">MODULE 8</span> The Freedom Framework:
+          Protect Your Time & Sanity
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Protect your time and energy. Design
-          "off-ramp" systems that let you unplug without guilt. Redefine success
-          from hours worked to outcomes delivered.
+        <div class="module-subtitle">
+          What this module is really about: Getting your personal life back —
+          without feeling guilty, behind, or constantly "on-call."
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Actually Achieve:</div>
           <ul>
+            <li>Build hard boundaries around your time.</li>
+            <li>Create systems that let you unplug without chaos erupting.</li>
+            <li>Shift from hours worked → outcomes delivered.</li>
+            <li>Build a sustainable rhythm instead of burning out.</li>
+          </ul>
+        </div>
+        <div class="module-section">
+          <div class="module-section-title">
+            What You'll Build (Action Tools):
+          </div>
+          <ul>
+            <li><strong>Personal Boundaries Map</strong></li>
             <li>
-              Personal boundaries framework (when you're available, when you're
-              not)
+              <strong>Off-Ramp Checklist</strong> (vacation, sick time, personal
+              days)
             </li>
-            <li>Off-ramp checklist for vacations and time off</li>
-            <li>Success metrics that measure outcomes, not hours</li>
+            <li><strong>Outcome Metrics Dashboard</strong></li>
+            <li><strong>Weekly Focus Planner</strong></li>
           </ul>
         </div>
       </div>
@@ -1357,13 +1427,13 @@
           <span class="module-num" style="background: #f39c12">BONUS</span>
           30-Day Implementation Sprint
         </div>
-        <div class="module-about">
-          <strong>What it's about:</strong> Turn everything into measurable
-          results in 30 days. Pick one team/project, apply the tools in
-          sequence, track your results.
+        <div class="module-subtitle">
+          What it's about: Turn everything into measurable results in 30 days.
+          Pick one team/project, apply the tools in sequence, track your
+          results.
         </div>
-        <div class="module-ships">
-          <div class="module-ships-title">What You'll Ship:</div>
+        <div class="module-section">
+          <div class="module-section-title">What You'll Build:</div>
           <ul>
             <li>Sprint workbook with week-by-week implementation plan</li>
             <li>
@@ -1406,11 +1476,10 @@
           border-radius: 6px;
         "
       >
-        <strong>Note:</strong> This is DIY by design — no coaching, no group
-        calls. But I do update the system quarterly. Enrollment opens once per
-        month so all new members start with the same version. If you want
-        additional live support after completing it, Group Coaching and VIP
-        1-on-1 programs are available as separate upgrades.
+        <strong>Note:</strong> This is self-paced by design — no mandatory
+        coaching calls, no group sessions. Just you, the system, and your team.
+        If you want additional live support after completing the course, Group
+        Coaching and VIP 1-on-1 programs are available as separate upgrades.
       </p>
 
       <h3>What You Get Inside: The Complete DCAT Implementation Checklist</h3>
@@ -1436,14 +1505,6 @@
         <p style="color: #95a5a6; font-size: 14px; margin: 0">
           Replace this section with the graph
         </p>
-        <p
-          style="
-            color: #95a5a6;
-            font-size: 13px;
-            margin-top: 10px;
-            font-style: italic;
-          "
-        ></p>
       </div>
 
       <p>By the time you complete the program, you'll have built:</p>
@@ -1541,103 +1602,25 @@
         </div>
       </div>
 
-      <p>
-        More importantly:
-        <strong>What's the cost of staying where you are?</strong>
-      </p>
-
-      <ul class="bullet-list">
-        <li>Another year of 80-hour weeks while your health deteriorates</li>
-        <li>Missing more of your kids' childhoods (they're only young once)</li>
-        <li>
-          Watching your best engineers leave because the chaos is unsustainable
-        </li>
-        <li>Getting passed over for VP again because you're "too tactical"</li>
-        <li>
-          Burning out and having someone else come in to fix what you couldn't
-        </li>
-      </ul>
-
       <div class="guarantee-block">
-        <h3>🏖️ The "Dream Vacation" Guarantee</h3>
+        <h3>90-Day Results Guarantee</h3>
         <p>
-          <strong>If your company is $500K+ ARR</strong> and you complete
-          Modules 1–6, deploy the Accountability Matrix + Meeting Stack with
-          your team, and conduct two weekly check-ins for 8 weeks, yet you're
-          not at a <strong>35%+ hour reduction by Day 90</strong>, reply to your
-          receipt with your implementation worksheet.
+          I stand behind this system because it works. If you complete the
+          modules, use the tools, and put the system into action — and you don't
+          see a meaningful reduction in workload or an improvement in team
+          execution — you can request a full refund within 90 days.
         </p>
-        <p style="margin-top: 20px">
-          <strong>I'll refund you in full within three business days.</strong>
+        <p style="margin-top: 20px">No hassle, no runaround.</p>
+        <p style="margin-top: 15px">
+          You do the work, and if the system doesn't deliver, I refund you.
         </p>
-      </div>
-
-      <h3>Guarantee FAQs:</h3>
-
-      <div class="faq">
-        <div class="faq-q">What counts as implementation?</div>
-        <div class="faq-a">
-          <p>
-            Implementation means you actually did the work. Not perfectly. Not
-            endlessly. Just the core pieces that make the system function.
-          </p>
-          <p><strong>Here's what "implementation" includes:</strong></p>
-          <ul>
-            <li>
-              <strong>Complete Modules 1–6</strong> — watch the lessons and
-              follow the steps
-            </li>
-            <li>
-              <strong>Build your core documents:</strong> Dependency audit,
-              Mission-to-metrics sheet (what matters this quarter),
-              Accountability matrix, Communication cadence, Weekly review
-              format, Execution checklist
-            </li>
-            <li>
-              <strong>Run the system for at least 8 weeks:</strong> Do the
-              weekly review, Use the communication rules, Use the accountability
-              dashboard
-            </li>
-            <li>
-              <strong>Show your work:</strong> That means sending the worksheets
-              or dashboards you created — nothing fancy, just proof you used the
-              system
-            </li>
-          </ul>
-          <p>
-            That's it. I'm not asking for perfection. Just proof you put the
-            system into play long enough for it to work.
-          </p>
-        </div>
-      </div>
-
-      <div class="faq">
-        <div class="faq-q">
-          What if something major happens (illness, outage, family emergency)?
-        </div>
-        <div class="faq-a">
-          <p>
-            If something significant hits and you need to pause, you can pause
-            once for up to 14 days—no questions asked.
-          </p>
-          <p><strong>Here's the exact rule:</strong></p>
-          <ul>
-            <li>You get one pause, maximum 14 days</li>
-            <li>You notify me when it starts</li>
-            <li>We stop the 90-day clock</li>
-            <li>After 14 days, the program automatically resumes</li>
-          </ul>
-          <p>
-            Anything longer than that turns into non-implementation, which means
-            the guarantee no longer applies.
-          </p>
-        </div>
-      </div>
-
-      <div class="urgency-note">
-        ⏰ Enrollment opens once per month. This month's cohort starts [DATE].
-        Next enrollment window opens in [X] weeks. Enroll now to start
-        immediately.
+        <p style="margin-top: 15px">
+          <a
+            href="#guarantee-terms"
+            style="color: white; text-decoration: underline"
+            >See full guarantee terms here.</a
+          >
+        </p>
       </div>
 
       <div class="cta-wrap">
@@ -1855,6 +1838,75 @@
             This isn't theory — it's the exact system I used to cut my own hours
             in half while my team's performance increased 400%.
           </p>
+        </div>
+      </div>
+
+      <hr class="section-divider" />
+
+      <!-- GUARANTEE TERMS & CLARIFICATIONS (MOVED DOWN) -->
+      <div id="guarantee-terms" class="guarantee-terms-box">
+        <div class="guarantee-terms-title">
+          Guarantee Terms & Clarifications
+        </div>
+
+        <div class="faq">
+          <div class="faq-q">What counts as implementation?</div>
+          <div class="faq-a">
+            <p>
+              Implementation means you actually did the work. Not perfectly. Not
+              endlessly. Just the core pieces that make the system function.
+            </p>
+            <p><strong>Here's what "implementation" includes:</strong></p>
+            <ul>
+              <li>
+                <strong>Complete Modules 1–6</strong> — watch the lessons and
+                follow the steps
+              </li>
+              <li>
+                <strong>Build your core documents:</strong> Dependency audit,
+                Mission-to-metrics sheet (what matters this quarter),
+                Accountability matrix, Communication cadence, Weekly review
+                format, Execution checklist
+              </li>
+              <li>
+                <strong>Run the system for at least 8 weeks:</strong> Do the
+                weekly review, Use the communication rules, Use the
+                accountability dashboard
+              </li>
+              <li>
+                <strong>Show your work:</strong> That means sending the
+                worksheets or dashboards you created — nothing fancy, just proof
+                you used the system
+              </li>
+            </ul>
+            <p>
+              That's it. I'm not asking for perfection. Just proof you put the
+              system into play long enough for it to work.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <div class="faq-q">
+            What if something major happens (illness, outage, family emergency)?
+          </div>
+          <div class="faq-a">
+            <p>
+              If something significant hits and you need to pause, you can pause
+              once for up to 14 days—no questions asked.
+            </p>
+            <p><strong>Here's the exact rule:</strong></p>
+            <ul>
+              <li>You get one pause, maximum 14 days</li>
+              <li>You notify me when it starts</li>
+              <li>We stop the 90-day clock</li>
+              <li>After 14 days, the program automatically resumes</li>
+            </ul>
+            <p>
+              Anything longer than that turns into non-implementation, which
+              means the guarantee no longer applies.
+            </p>
+          </div>
         </div>
       </div>
 
